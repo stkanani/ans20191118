@@ -1,0 +1,10 @@
+---
+- name: Copying files
+  hosts: planetexpress
+
+  tasks:
+
+          - name: Copy Fry's resume to hosts
+            copy:
+                    src: ~/ansi/files/fry.txt
+                    dest: ~/fry.txt 

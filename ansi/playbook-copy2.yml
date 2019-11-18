@@ -1,0 +1,13 @@
+---
+- name: copying content from controller to hosts
+  hosts: planetexpress
+  gather_facts: yes
+
+  tasks:
+          - name: copy gather fact var data into hosts
+            copy: 
+              content: "{{ ansible_all_ipv4_addresses }}"
+              dest: ~/ipv4info.txt
+              backup: yes
+              force: yes
+

@@ -1,0 +1,10 @@
+---
+- name: our first play
+  hosts: planetexpress:!farnsworth
+
+  tasks:
+          - name: Install steam locomotive
+            apt:
+                    name: sl
+                    state: present
+            become: yes         

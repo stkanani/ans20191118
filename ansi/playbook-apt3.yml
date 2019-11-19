@@ -1,0 +1,11 @@
+---
+- name: our first play
+  hosts: planetexpress
+
+  tasks:
+          - name: Install steam locomotive
+            apt:
+                    name: sl
+                    state: present
+            become: yes         
+            when: ansible_distribution == "Ubuntu"
